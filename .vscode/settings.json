@@ -2,5 +2,8 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "fj11-lib-contas.jar"
+    ],
+    "java.project.sourcePaths": [
+        "ProjetoFj11\\src"
     ]
 }
