@@ -1,14 +1,12 @@
 package br.com.caelum.contas.modelo;
 
-import br.com.caelum.contas.itfc.Tributavel;
-
 public class ContaCorrente extends Conta implements Tributavel {
 
 	public String getTipo() {
 		return super.getTipo() + " Corrente";
 	}
 
-	public double calculaTributos(){
+	public double getValorImposto(){
 		
 		return this.getSaldo() * 0.01;
 	}
