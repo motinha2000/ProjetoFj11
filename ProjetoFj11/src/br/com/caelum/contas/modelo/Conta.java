@@ -7,7 +7,7 @@ public abstract class Conta {
 	protected double saldo;
 	protected String dataDeAbertura;
 
-	//public abstract String getTipo();
+	// public abstract String getTipo();
 
 	public void transfere(double valor, Conta conta) {
 		this.saca(valor);
@@ -51,7 +51,11 @@ public abstract class Conta {
 	}
 
 	public void deposita(double valor) {
-		this.saldo += valor;
+		if (valor < 0) {
+			throw new IllegalArgumentException();
+		} else {
+			this.saldo += valor;
+		}
 	}
 
 	public void saca(double valor) {
